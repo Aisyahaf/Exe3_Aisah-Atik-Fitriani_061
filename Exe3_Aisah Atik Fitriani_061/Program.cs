@@ -67,6 +67,20 @@ namespace Exe3_Aisah_Atik_Fitriani_061
             LAST = nodeBaru;
         }
         
+        public bool delNode(int nim)
+        {
+            Node previous, current;
+            previous = current = null;
+            LAST = null;
+
+            if (Search(nim, ref previous, ref current) == false)
+                return false;
+            if (previous == LAST)
+                previous.next = LAST.next;
+            return true;
+
+            LAST.next = current.next;
+        }
 
         public bool Search(int rollNo, ref Node previous, ref Node current)
         {
