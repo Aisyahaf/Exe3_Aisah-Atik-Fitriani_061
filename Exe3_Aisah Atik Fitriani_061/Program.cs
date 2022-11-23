@@ -27,9 +27,9 @@ namespace Exe3_Aisah_Atik_Fitriani_061
         {
             int nim;
             string nm;
-            Console.Write("\nMasukkan nomor Mahasiswa : ");
+            Console.Write("\nEnter the roll number of the student: ");
             nim = Convert.ToInt32(Console.ReadLine());
-            Console.Write("\nMasukkan nama Mahasiswa : ");
+            Console.Write("\nEnter the name of the student:");
             nm = Console.ReadLine();
             Node nodeBaru = new Node();
             nodeBaru.rollNumber = nim ;
@@ -39,12 +39,14 @@ namespace Exe3_Aisah_Atik_Fitriani_061
             {
                 if((LAST != null) && (nim == LAST.rollNumber))
                 {
-                    Console.WriteLine("\nNomer Mahasiswa sama tidak diijinkan\n");
+                    Console.WriteLine("\nDuplicate roll numbers not allowed\n");
                     return;
                 }
                 LAST.next = nodeBaru;
                 nodeBaru.next = LAST.next;
             }
+            //LAST.next = nodeBaru;
+            //nodeBaru.next = LAST.next;
 
             Node previous, current;
             previous = LAST;
@@ -54,7 +56,7 @@ namespace Exe3_Aisah_Atik_Fitriani_061
             {
                 if(nim == current.rollNumber)
                 {
-                    Console.WriteLine("\nNomer Mahasiswa sama tidak diijinkan\n");
+                    Console.WriteLine("\nDuplicate roll numbers not allowed\n");
                     return;
                 }
                 previous = null;
