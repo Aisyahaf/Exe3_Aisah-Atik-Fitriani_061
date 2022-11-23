@@ -64,5 +64,16 @@ namespace Exe3_Aisah_Atik_Fitriani_061
                 }
             }
         }
+
+
+        public void firstNode()
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList is Empty");
+            else
+                Console.WriteLine("\nThe first record in the list is:\n\n" + LAST.next.rollNumber + " " + LAST.next.name);
+        }
+
+
     }
 }
