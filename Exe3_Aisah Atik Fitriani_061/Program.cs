@@ -39,5 +39,13 @@ namespace Exe3_Aisah_Atik_Fitriani_061
             else
                 return (false);
         }
+
+        public bool listEmpty()
+        {
+            if (LAST == null)
+                return true;
+            else
+                return false;
+        }
     }
 }
