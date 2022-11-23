@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Exe3_Aisah_Atik_Fitriani_061
 {
-    internal class Program
+    class Node
     {
-        static void Main(string[] args)
-        {
-        }
+        /**/
+        public int rollNumber;
+        public string name;
+        public Node next;
     }
 }
