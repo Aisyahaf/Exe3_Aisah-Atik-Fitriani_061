@@ -13,4 +13,16 @@ namespace Exe3_Aisah_Atik_Fitriani_061
         public string name;
         public Node next;
     }
+
+    class CircularList
+    {
+        Node LAST;
+
+        public CircularList()
+        {
+            LAST = null;
+        }
+
+
+    }
 }
