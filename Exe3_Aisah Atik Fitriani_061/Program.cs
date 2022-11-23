@@ -23,6 +23,25 @@ namespace Exe3_Aisah_Atik_Fitriani_061
             LAST = null;
         }
 
+        public void Insert()
+        {
+            int nim;
+            string nm;
+            Console.Write("\nMasukkan nomor Mahasiswa : ");
+            nim = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nMasukkan nama Mahasiswa : ");
+            nm = Console.ReadLine();
+            Node nodeBaru = new Node();
+            nodeBaru.rollNumber = nim ;
+            nodeBaru.name = nm;
+
+            if (LAST == null || nim <= LAST.rollNumber)
+            {
+                if
+            }
+        }
+        
+
         public bool Search(int rollNo, ref Node previous, ref Node current)
         {
             for (previous = current = LAST.next;
