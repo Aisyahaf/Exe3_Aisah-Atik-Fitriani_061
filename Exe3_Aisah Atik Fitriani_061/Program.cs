@@ -47,5 +47,22 @@ namespace Exe3_Aisah_Atik_Fitriani_061
             else
                 return false;
         }
+
+        public void traverse()
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList is Empty");
+            else
+            {
+                Console.WriteLine("\nRecords in the list are :\n");
+                Node currentNode;
+                currentNode = LAST.next;
+                while (currentNode != LAST)
+                {
+                    Console.Write(currentNode.rollNumber + " " + currentNode.name + "\n");
+                    Console.Write(LAST.rollNumber + " " + LAST.name + "\n");
+                }
+            }
+        }
     }
 }
