@@ -37,8 +37,34 @@ namespace Exe3_Aisah_Atik_Fitriani_061
 
             if (LAST == null || nim <= LAST.rollNumber)
             {
-                if
+                if((LAST != null) && (nim == LAST.rollNumber))
+                {
+                    Console.WriteLine("\nNomer Mahasiswa sama tidak diijinkan\n");
+                    return;
+                }
+                LAST.next = nodeBaru;
+                nodeBaru.next = LAST.next;
             }
+
+            Node previous, current;
+            previous = LAST;
+            current = LAST;
+
+            while((current != null) &&(nim >= current.rollNumber))
+            {
+                if(nim == current.rollNumber)
+                {
+                    Console.WriteLine("\nNomer Mahasiswa sama tidak diijinkan\n");
+                    return;
+                }
+                previous = null;
+                previous = current;
+                current = current.next;
+            }
+
+            nodeBaru.next = LAST.next;
+            LAST.next = nodeBaru;
+            LAST = nodeBaru;
         }
         
 
