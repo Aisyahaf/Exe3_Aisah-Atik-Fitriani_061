@@ -141,10 +141,12 @@ namespace Exe3_Aisah_Atik_Fitriani_061
                 try
                 {
                     Console.WriteLine("\nMenu");
+                    Console.WriteLine("1. Add a record to the list ");
+                    Console.WriteLine("2. Delete a record from the list ");
                     Console.WriteLine("1. View all the records in the list");
-                    Console.WriteLine("2. Search for a records in the list");
-                    Console.WriteLine("3. Display the first records in the list");
-                    Console.WriteLine("4. Exit");
+                    Console.WriteLine("4. Search for a records in the list");
+                    Console.WriteLine("5. Display the first records in the list");
+                    Console.WriteLine("6. Exit");
                     Console.Write("\nEnter your choice (1-4) : ");
 
                     char ch = Convert.ToChar(Console.ReadLine());
@@ -152,10 +154,33 @@ namespace Exe3_Aisah_Atik_Fitriani_061
                     {
                         case '1':
                             {
-                                obj.traverse();
+                                obj.Insert();
                             }
                             break;
                         case '2':
+                            {
+                                if (obj.listEmpty())
+                                {
+                                    Console.WriteLine("\n List is empty");
+                                    break;
+                                }
+                                Console.Write("Enter the rollnumber of the student" +
+                                    "Whose record is to be deleted:");
+                                int rollNumber = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if (obj.delNode(rollNumber) == false)
+                                    Console.WriteLine("Record not found");
+                                else
+                                    Console.WriteLine("Recprd with roll number" + rollNumber + "deleted \n");
+
+                            }
+                            break;
+                        case '3':
+                            {
+                                obj.traverse();
+                            }
+                            break;
+                        case '4':
                             {
                                 if (obj.listEmpty()== true)
                                 {
@@ -176,12 +201,12 @@ namespace Exe3_Aisah_Atik_Fitriani_061
                                 }
                             }
                             break;
-                        case '3':
+                        case '5':
                             {
                                 obj.firstNode();
                             }
                             break;
-                        case '4':
+                        case '6':
                             return;
                         default:
                             {
